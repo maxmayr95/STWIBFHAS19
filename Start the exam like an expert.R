@@ -10,3 +10,5 @@ attach(data)
 #e) siblings = discret
 #f) present = continous
 library(MASS) #for fractions(amountOfSeven/(6*6)) => zeigt brüchte an
+library(Hmisc) 
+describe(c(0,1),type=2)
