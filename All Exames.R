@@ -73,7 +73,7 @@ lengthA = length(class[class == "A"])
 lengthB = length(class[class == "B"])
 test =prop.test(x=lengthA,n=length(class), p = 0.5)
 test$p.value
-
+test =prop.test(x=lengthA,n=length(class), p = lengthB/length(class))
 prop.test(x=lengthA,n=lengthB, p = 0.5) #Dies beweisst, dass sie nicht im verhältniss 0.5 zu einander stehen
 
 #Ja sie sind verschieden

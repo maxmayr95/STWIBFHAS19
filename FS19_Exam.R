@@ -31,7 +31,7 @@ internationalPrice = as.numeric(internationalPrice) #wir konvertieren es in Nume
 cor(internationalWeight,internationalPrice) #cor = -0.023
 
 plot(internationalPrice,internationalWeight, type = "p") 
-abline(lm(internationalPrice~internationalWeight))
+abline(lm(internationalWeight~internationalPrice))
 
 #Es gibt keinen Assozation zwischen den Variabeln 
 
@@ -60,7 +60,7 @@ sd(sample) #0.568
 1-(0.8)^4 #0.59
 
 # c) The post office would like to know whether the proportions of mail sent by A Class is
-# any different to tht proportion sent by B Class. Create an appropiate hypothesis test and
+# any different to the proportion sent by B Class. Create an appropiate hypothesis test and
 # use the data postOffice to test whther or not this is the case.
 
 # H0 P(A) = P(B)
@@ -71,7 +71,9 @@ pHatB = length(class[class == "B"])/length(class)
 lengthA = length(class[class == "A"])
 lengthB = length(class[class == "B"])
 test =prop.test(x=lengthA,n=length(class), p = 0.5)
-test$p.value
+
+test =prop.test(x=lengthA,n=length(class), p = lengthB/length(class))
+
 
 prop.test(x=lengthA,n=lengthB, p = 0.5) #Dies beweisst, dass sie nicht im verhältniss 0.5 zu einander stehen
 

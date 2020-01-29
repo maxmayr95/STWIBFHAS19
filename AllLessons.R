@@ -117,6 +117,7 @@ hist(cash)
 
 
 shortestBoy = sort.int(maleHeights)[1]
+
 #or => min(maleHeights)
 girsHigherThanShortestBoy = height[gender=='F' & height > shortestBoy]
 howManyGirlsAreTaller = length(girsHigherThanShortestBoy)
@@ -1174,7 +1175,7 @@ qnorm(0.25,119,7.2)
 #or 
 calculateAtWhichNumberAreXPercentBigger(7.2,119,75)
 calculateAtWhichNumberAreXPercentBigger(7.2,119,0.75)
-
+t.test 
 #9
 # The Attendance at a rock concert is normally distributed with a mean of
 # 28 000 persons and a standard deviation of 4000 persons. What is the probability,
