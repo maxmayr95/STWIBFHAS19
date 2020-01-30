@@ -1,5 +1,6 @@
 library(openxlsx)
-data = read.xlsx(xlsxFile = './STWI Exam HS19.xlsx') #add file here or rename your exam file to Data.xlsx and copy it into this folder
+data = read.xlsx(xlsxFile = './STWI Exam HS19.xlsx')
+data = read.xlsx(xlsxFile = './STWI_Exam_HS19.xlsx')#add file here or rename your exam file to Data.xlsx and copy it into this folder
 attach(data) 
 # => this sign is for copy pase : ~
 # use percent => mean(stockData$`%.Fall`)
